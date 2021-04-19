@@ -1,6 +1,6 @@
 # Website  
   
-This is my website. It is built with Next.js and deployed on Vercel. It is available at [geist.ga](https://geist.ga)  
+This is my website. It is built with Next.js and deployed on Vercel automatically from this repository. It is available at [geist.ga](https://geist.ga)  
   
 ## CLI  
   

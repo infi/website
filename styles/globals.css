@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+
+body {
+    font-family: "Lexend", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    background: url("../public/background.png") #101010;
+    background-size: cover;
+    font-size: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.contents {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    color: white;
+    animation: hue-background 20s linear infinite;
+}
+
+.name {
+    user-select: none;
+    font-size: 5em;
+}
+
+.socialgrid {
+    display: flex;
+    gap: 1em;
+}
+
+.socialitem {
+    user-select: none;
+    transition: 0.4s;
+    animation: hue-foreground 5s linear infinite;
+    filter: brightness(1000%) saturate(0%);
+}
+
+.socialitem:hover {
+    color: blueviolet;
+    filter: brightness(100%) saturate(200%);
+}
+
+@media screen and (max-width: 1200px) {
+    .name {
+        font-size: 2.5em;
+    }
+
+    .socialgrid {
+        flex-direction: column;
+        gap: 0.25em;
+    }
+}
+
+@keyframes hue-background {
+    from {
+        backdrop-filter: hue-rotate(0deg);
+    }
+    to {
+        backdrop-filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes hue-foreground {
+    from {
+        color: rgb(119, 25, 226);
+    }
+    50% {
+        color: rgb(25, 202, 226);
+    }
+    to {
+        color: rgb(119, 25, 226);
+    }
+}

@@ -39,7 +39,9 @@ export default function Home() {
         <title>SP46</title>
       </Head>
       <div className="contents">
-        <h1 className="name">SP46</h1>
+        <div className="name-container">
+          <h1 className="name">SP46</h1>
+        </div>
         <div className="socialgrid">
           {isShowingDiscordData ?
             <>

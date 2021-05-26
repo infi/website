@@ -9,9 +9,15 @@ body {
     align-items: center;
     align-content: center;
     height: 100vh;
-    background: url("../public/background.png") #101010;
     background-size: cover;
     font-size: 2em;
+    background: url("../public/background-fhd.png") #101010;
+}
+
+@media screen and (min-height: 2160px) {
+    body {
+        background: url("../public/background-4k.png") #101010;
+    }
 }
 
 h1,
@@ -35,9 +41,18 @@ h6 {
     animation: hue-background 20s linear infinite;
 }
 
+.name-container {
+    max-height: 5em;
+    overflow: hidden;
+    max-width: 100vw;
+    padding-bottom: 1em;
+}
+
 .name {
-    user-select: none;
     font-size: 5em;
+    user-select: none;
+    position: relative;
+    animation: slide-in 1s cubic-bezier(0.44, 0.47, 0.07, 1.14);
 }
 
 .pagetitle {
@@ -97,9 +112,18 @@ h6 {
         color: rgb(119, 25, 226);
     }
     50% {
-        color: rgb(25, 202, 226);
+        color: rgb(25, 119, 226);
     }
     to {
         color: rgb(119, 25, 226);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        top: 150%;
+    }
+    to {
+        top: 0;
     }
 }
